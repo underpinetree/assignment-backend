@@ -8,5 +8,4 @@ open class HogehogeApplication
 
 fun main(args: Array<String>) {
     runApplication<HogehogeApplication>(*args)
-    println("hogehoge")
 }
