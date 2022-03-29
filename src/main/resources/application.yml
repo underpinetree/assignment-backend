@@ -1,0 +1,32 @@
+spring:
+    config:
+        import: "optional:classpath:./application-test.yml"
+    jpa:
+        database: POSTGRESQL
+        properties:
+            hibernate:
+                jdbc:
+                    time_zone: 'UTC'
+    datasource:
+        url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/kuehnenagel}
+        username: ${DATASOURCE_USERNAME:postgres}
+        password: ${DATASOURCE_PASSWORD:}
+    flyway:
+        enabled: true
+        url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/kuehnenagel}
+        user: ${DATASOURCE_USERNAME:postgres}
+        password: ${DATASOURCE_PASSWORD:}
+        out-of-order: true
+    jackson:
+        property-naming-strategy: SNAKE_CASE
+    session:
+        store-type: redis
+    redis:
+        host: ${REDIS_HOST:localhost}
+        port: ${REDIS_PORT:6379}
+server:
+    port: ${PORT:8080}
+    servlet:
+        session:
+            cookie:
+                http-only: true
