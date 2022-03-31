@@ -11,8 +11,9 @@ class UserService(
 ) {
     fun getUsers(): List<User> = userRepository.findAll()
 
-    fun getUserByNameLike(name: String): List<User> =
-        userRepository.findByNameLike(name)
+    fun getUsersByNameLike(name: String): List<User> {
+        return userRepository.findAllByNameLike(name)
+    }
 
     fun getUserById(id: Long): User? =
         userRepository.findByIdOrNull(id)

@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(private val userService: UserService) : RestfulController {
     @GetMapping
     fun getUsers(@RequestParam(value = "name") name: String?): ResponseEntity<UserListDto> {
-        val users = if (name != null) {
-            userService.getUserByNameLike(name)
-        } else {
-            userService.getUsers()
-        }
+        val users = name?.let {
+            userService.getUsersByNameLike(it)
+        } ?: userService.getUsers()
         return ResponseEntity.ok().body(UserListDto.new(users))
     }
 }
