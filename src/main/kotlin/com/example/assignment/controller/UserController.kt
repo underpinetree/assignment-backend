@@ -1,7 +1,7 @@
-package com.example.hogehoge.controller
+package com.example.assignment.controller
 
-import com.example.hogehoge.controller.dto.response.UserListDto
-import com.example.hogehoge.service.UserService
+import com.example.assignment.controller.dto.response.UserListDto
+import com.example.assignment.service.UserService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -14,7 +14,7 @@ class UserController(private val userService: UserService) : RestfulController {
     @GetMapping
     fun getUsers(@RequestParam(value = "name") name: String?): ResponseEntity<UserListDto> {
         val users = if (name != null) {
-            userService.getUserByName(name)
+            userService.getUserByNameLike(name)
         } else {
             userService.getUsers()
         }

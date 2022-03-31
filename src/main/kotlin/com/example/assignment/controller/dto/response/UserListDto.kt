@@ -1,6 +1,6 @@
-package com.example.hogehoge.controller.dto.response
+package com.example.assignment.controller.dto.response
 
-import com.example.hogehoge.model.User
+import com.example.assignment.model.User
 
 data class UserListDto(
     val users: List<UserListItemDto>

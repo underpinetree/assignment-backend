@@ -1,11 +1,11 @@
-package com.example.hogehoge
+package com.example.assignment
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-open class HogehogeApplication
+open class assignmentApplication
 
 fun main(args: Array<String>) {
-    runApplication<HogehogeApplication>(*args)
+    runApplication<assignmentApplication>(*args)
 }

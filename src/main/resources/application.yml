@@ -18,6 +18,8 @@ spring:
         password: ${DATASOURCE_PASSWORD:}
         out-of-order: true
     jackson:
+        deserialization:
+            ACCEPT_EMPTY_STRING_AS_NULL_OBJECT: true
         property-naming-strategy: SNAKE_CASE
     session:
         store-type: redis

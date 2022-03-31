@@ -1,9 +1,9 @@
-package com.example.hogehoge.controller.dto.response
+package com.example.assignment.controller.dto.response
 
-import com.example.hogehoge.model.User
+import com.example.assignment.model.User
 import java.time.LocalDateTime
 
-data class UserDto(
+data class UserListItemDto(
     val id: Long,
     val name: String,
     val icon: String,
@@ -11,11 +11,11 @@ data class UserDto(
     val updatedAt: LocalDateTime
 ) {
     companion object {
-        fun new(user: User): UserDto {
-            return UserDto(
+        fun new(user: User): UserListItemDto {
+            return UserListItemDto(
                 id = user.id,
                 name = user.name,
-                icon = user.icon,
+                icon = user.url,
                 createdAt = user.createdAt,
                 updatedAt = user.updatedAt
             )

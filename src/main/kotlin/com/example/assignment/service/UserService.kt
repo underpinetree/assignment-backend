@@ -1,7 +1,7 @@
-package com.example.hogehoge.service
+package com.example.assignment.service
 
-import com.example.hogehoge.model.User
-import com.example.hogehoge.repository.UserRepository
+import com.example.assignment.model.User
+import com.example.assignment.repository.UserRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 
@@ -11,9 +11,11 @@ class UserService(
 ) {
     fun getUsers(): List<User> = userRepository.findAll()
 
-    fun getUserByName(name: String): List<User> =
-        userRepository.findByName(name)
+    fun getUserByNameLike(name: String): List<User> =
+        userRepository.findByNameLike(name)
 
     fun getUserById(id: Long): User? =
         userRepository.findByIdOrNull(id)
+
+    fun addUser(user: User) = userRepository.save(user)
 }

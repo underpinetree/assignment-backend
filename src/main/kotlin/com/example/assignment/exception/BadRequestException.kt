@@ -1,4 +1,4 @@
-package com.example.hogehoge.exception
+package com.example.assignment.exception
 
 class BadRequestException(
     val httpStatusCode: Int,

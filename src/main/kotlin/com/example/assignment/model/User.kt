@@ -1,4 +1,4 @@
-package com.example.hogehoge.model
+package com.example.assignment.model
 
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.UpdateTimestamp
@@ -22,7 +22,7 @@ data class User(
     var name: String,
 
     @field:[NotBlank]
-    var icon: String,
+    var url: String,
 
     @field: CreationTimestamp
     @Column(updatable = false)

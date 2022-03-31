@@ -1,7 +1,7 @@
-package com.example.hogehoge.controller
+package com.example.assignment.controller
 
-import com.example.hogehoge.exception.BadRequestException
-import com.example.hogehoge.exception.NotFoundException
+import com.example.assignment.exception.BadRequestException
+import com.example.assignment.exception.NotFoundException
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseStatus
