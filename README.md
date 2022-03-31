@@ -1,6 +1,6 @@
 # Full stack developer for customer facing website (req79330)
 
-##Task description
+## Task description
 Create a simple "contact list" web application that allows:
 - Listing people (name and photo)
 - Searching by name
