@@ -6,7 +6,7 @@ import java.time.LocalDateTime
 data class UserDto(
     val id: Long,
     val name: String,
-    val icon: String,
+    val url: String,
     val createdAt: LocalDateTime,
     val updatedAt: LocalDateTime
 ) {
@@ -15,7 +15,7 @@ data class UserDto(
             return UserDto(
                 id = user.id,
                 name = user.name,
-                icon = user.url,
+                url = user.url,
                 createdAt = user.createdAt,
                 updatedAt = user.updatedAt
             )
