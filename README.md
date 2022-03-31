@@ -16,11 +16,11 @@ Prerequisite
 
 
 ### Create `kuehnenagel` database
-    ```
+    
     psql postgres
     postgres=# create user postgres;
     postgres=# create database kuehnenagel owner=postgres;
-    ```
+  
 
 ### Inputting initial data
 
