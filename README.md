@@ -12,6 +12,7 @@ Prerequisite
 
 - PostgreSQL: version 14, create `kuehnenagel` database
 - JDK: 11
+- Redis: 6.0
 
 
 ### Create `kuehnenagel` database
