@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(private val userService: UserService) : RestfulController {
     @GetMapping
     fun getUsers(@RequestParam(value = "name") name: String?): ResponseEntity<UserListDto> {
-        val users = name?.let {
-            userService.getUsersByNameLike(it)
-        } ?: userService.getUsers()
-        return ResponseEntity.ok().body(UserListDto.new(users))
+        if (name != null) {
+            val lower = name.lowercase()
+            val users = userService.getUsersByNameLike(lower)
+            return ResponseEntity.ok().body(UserListDto.new(users))
+        } else {
+            return ResponseEntity.ok().body(UserListDto.new(userService.getUsers()))
+        }
     }
 }

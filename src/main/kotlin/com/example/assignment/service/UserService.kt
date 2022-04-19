@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 class UserService(
     private val userRepository: UserRepository
 ) {
-    fun getUsers(): List<User> = userRepository.findAll()
+    fun getUsers(): List<User> = userRepository.findAllByOrderByName()
 
     fun getUsersByNameLike(name: String): List<User> {
         return userRepository.findAllByNameLike(name)
