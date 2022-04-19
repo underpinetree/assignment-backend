@@ -1,6 +1,6 @@
 # Full stack developer for customer facing website (req79330)
 
-##Task description
+## Task description
 Create a simple "contact list" web application that allows:
 - Listing people (name and photo)
 - Searching by name
@@ -12,14 +12,15 @@ Prerequisite
 
 - PostgreSQL: version 14, create `kuehnenagel` database
 - JDK: 11
+- Redis: 6.0
 
 
 ### Create `kuehnenagel` database
-    ```
+    
     psql postgres
     postgres=# create user postgres;
     postgres=# create database kuehnenagel owner=postgres;
-    ```
+  
 
 ### Inputting initial data
 
